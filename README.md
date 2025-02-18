@@ -36,10 +36,9 @@ npm start      # Run the compiled JavaScript
 The bot will:
 1. Open a browser window
 2. Navigate to the USOS login page
-3. Take a pre-login screenshot
-4. Log in with your credentials
-5. Navigate to the specified course registration page
-6. Continuously check the registration button status
+3. Log in with your credentials
+4. Navigate to the specified course registration page
+5. Continuously check the registration button status
    - If the button is disabled, it will wait and retry
    - If the button is enabled, it will automatically click it
-7. Automatically close the browser after 10 seconds of completing the registration
+6. Automatically close the browser after 10 seconds of completing the registration

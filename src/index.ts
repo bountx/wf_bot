@@ -21,8 +21,6 @@ async function run(): Promise<void> {
 
         await page.goto(LOGIN_ZAPISY_WF_URL || '');
 
-        await page.screenshot({ path: 'pre-login.png' });
-
         await page.type('#username', USOS_LOGIN || '');
         await page.type('#password', USOS_PASSWORD || '');
 
@@ -57,9 +55,6 @@ async function run(): Promise<void> {
 
     } catch (error) {
         console.error('An error occurred:', error);
-        if (page) {
-            await page.screenshot({ path: 'error.png' });
-        }
     } finally {
         await new Promise(resolve => setTimeout(resolve, 10000));
         await browser.close();
